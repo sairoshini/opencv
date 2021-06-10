@@ -99,7 +99,7 @@ class Ui_MainWindow(object):
         print('Image saved as:', self.filename)
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Pyshine photo editor"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "HackSlayers photo editor"))
         self.pushButton_2.setText(_translate("MainWindow", "Open"))
         self.pushButton.setText(_translate("MainWindow", "Save"))
 if __name__ == "__main__":
