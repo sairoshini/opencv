@@ -17,7 +17,6 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setText("")
-        # self.label.setPixmap(QtGui.QPixmap("images/2.jpg"))
         self.label.setObjectName("label")
         self.horizontalLayout_3.addWidget(self.label)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
@@ -54,10 +53,10 @@ class Ui_MainWindow(object):
         self.pushButton_2.clicked.connect(self.loadImage)
         self.pushButton.clicked.connect(self.savePhoto)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-        self.filename = None  # Will hold the image address location
-        self.tmp = None  # Will hold the temporary image for display
-        self.brightness_value_now = 0  # Updated brightness value
-        self.blur_value_now = 0  # Updated blur value
+        self.filename = None 
+        self.tmp = None
+        self.brightness_value_now = 0 
+        self.blur_value_now = 0 
     def loadImage(self):
         self.filename = QFileDialog.getOpenFileName(filter="Image (*.*)")[0]
         self.image = cv2.imread(self.filename)
@@ -86,7 +85,7 @@ class Ui_MainWindow(object):
         img = cv2.cvtColor(final_hsv, cv2.COLOR_HSV2BGR)
         return img
     def changeBlur(self, img, value):
-        kernel_size = (value + 1, value + 1)  # +1 is to avoid 0
+        kernel_size = (value + 1, value + 1)
         img = cv2.blur(img, kernel_size)
         return img
     def update(self):
@@ -128,7 +127,6 @@ class Ui_MainWindow(object):
         self.horizontalLayout_3.setObjectName("horizontalLayout_3")
         self.label = QtWidgets.QLabel(self.centralwidget)
         self.label.setText("")
-        # self.label.setPixmap(QtGui.QPixmap("images/2.jpg"))
         self.label.setObjectName("label")
         self.horizontalLayout_3.addWidget(self.label)
         self.horizontalLayout = QtWidgets.QHBoxLayout()
@@ -165,10 +163,10 @@ class Ui_MainWindow(object):
         self.pushButton_2.clicked.connect(self.loadImage)
         self.pushButton.clicked.connect(self.savePhoto)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-        self.filename = None  # Will hold the image address location
-        self.tmp = None  # Will hold the temporary image for display
-        self.brightness_value_now = 0  # Updated brightness value
-        self.blur_value_now = 0  # Updated blur value
+        self.filename = None 
+        self.tmp = None 
+        self.brightness_value_now = 0
+        self.blur_value_now = 0 
     def loadImage(self):
         self.filename = QFileDialog.getOpenFileName(filter="Image (*.*)")[0]
         self.image = cv2.imread(self.filename)
@@ -197,7 +195,7 @@ class Ui_MainWindow(object):
         img = cv2.cvtColor(final_hsv, cv2.COLOR_HSV2BGR)
         return img
     def changeBlur(self, img, value):
-        kernel_size = (value + 1, value + 1)  # +1 is to avoid 0
+        kernel_size = (value + 1, value + 1)
         img = cv2.blur(img, kernel_size)
         return img
     def update(self):
